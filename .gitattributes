@@ -1,2 +1,8 @@
-# Auto detect text files and perform LF normalization
+*.ipynb   filter=clean  linguist-language=Jupyter
+*.py      text eol=lf
+*.json    text eol=lf
+*.md      text eol=lf
+*.csv     text eol=lf
+*.png     binary
+*.jpg     binary
 * text=auto
