@@ -35,6 +35,7 @@ This system uses a transparent rule-based model to assign scores to wallets base
 
 ## Architecture Flow
 
+```mermaid
 graph TD
     A[Input: user-wallet-transactions.json] --> B[Data Preprocessing: data_preprocessing()]
     B --> C[Feature Engineering: feature_extract()]
@@ -43,4 +44,3 @@ graph TD
     E --> F[Output: wallet_scores.json]
     F --> G[Score Distribution Visualization]
     F --> H[Behavioral Analysis: analysis.md]
-
