@@ -35,13 +35,12 @@ This system uses a transparent rule-based model to assign scores to wallets base
 
 ## Architecture Flow
 
-```mermaid
 graph TD
-    A[Raw JSON Transaction Data] --> B[Data Preprocessing]
-    B --> C[Cleaned DataFrame]
-    C --> D[Feature Engineering]
-    D --> E[Wallet-Level Metrics]
-    E --> F[Rule-Based Scoring]
-    F --> G[Wallet Score Dictionary]
-    G --> H[Export to JSON]
-    G --> I[Visual Analysis + Reporting]
+    A[Input: user-wallet-transactions.json] --> B[Data Preprocessing: data_preprocessing()]
+    B --> C[Feature Engineering: feature_extract()]
+    C --> D[Wallet-Level Features DataFrame]
+    D --> E[Scoring: calculate_wallet_scores()]
+    E --> F[Output: wallet_scores.json]
+    F --> G[Score Distribution Visualization]
+    F --> H[Behavioral Analysis: analysis.md]
+
